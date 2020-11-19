@@ -1,5 +1,6 @@
 # How to run
 Either import this into Eclipse or compile Game.java.
+The main method is in Game.java
 
 # How to make a strategy
 The strategy must extend Strategy.java and must be in strat.
