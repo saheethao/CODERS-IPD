@@ -76,3 +76,14 @@ This method returns the amount of times the strategy has recieved the payoff T (
 
 ## public int getP()
 This method returns the amount of times the strategy has recieved the payoff P (1)
+
+## public int getRoundsPlayed()
+This method returns the amount of rounds played.
+
+# How do I get the last move my opponent played?
+```java
+/* Somewhere in child strategy */
+int rounds = info.getRoundsPlayed();
+int[] oppMoves = info.getOppMoves();
+int oppMove = oppMoves[info.getRoundsPlayed() - 1]; // This will be the opponent's last move. // Be aware of index out of bounds exceptions
+```
