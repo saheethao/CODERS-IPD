@@ -74,9 +74,7 @@ This method returns the amount of times the strategy has recieved the payoff S (
 ## public int getT()
 This method returns the amount of times the strategy has recieved the payoff T (5)
 
-## ```java
-public int getP()
-```
+## public int getP()
 This method returns the amount of times the strategy has recieved the payoff P (1)
 
 ## public int getRoundsPlayed()
