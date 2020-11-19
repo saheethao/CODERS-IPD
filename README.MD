@@ -8,29 +8,41 @@ Below is a template for a strategy:
 ```java
 package strat;
 
-public class Cooperate extends Strategy {
-	
+public class MyStrategy extends Strategy {
+	/*
+	 * Global variables here
+	 */
 	public Cooperate() {
 		super();
 	}
 
 	/**
-	 * Unconditionally cooperates
+	 * Return 0 or 1. Make the strategy here.
 	 */
 	protected int generateMove() {
 		return 0;
 	}
 	
+	/**
+	 *
+	 * Some strategies need to reinitialize. This is called before each match between strategies.
+	 */
 	public void reinit() {
-		/* None needed */
+		/* reinitialize global variables */
 	}
 	
+	/**
+	 * Returns the name of your strategy. Maybe its called "70% chance to cooperate" or "Elizabeth". Your choice.
+	 */
 	protected String getName() {
-		return "Cooperate";
+		return "MyStrategy";
 	}
 	
+	/**
+	 * Return your name here. You can choose to return null as well.
+	 */
 	protected String getAuthor() {
-		return null;
+		return "Sahee Thao";
 	}
 }
 ```
