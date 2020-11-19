@@ -3,8 +3,8 @@
 * Contains set methods used to update info by Game
 * 
 * @author  Sahee Thao
-* @version 1.0.0
-* @since   2020-11-18
+* @version 1.1.0
+* @since   2020-11-19
 */
 package game;
 
