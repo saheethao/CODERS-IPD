@@ -51,7 +51,7 @@ public class MyStrategy extends Strategy {
 # Info.java
 This class contains get methods.
 
-Strategy has an Info object that keeps track of the data relevant to its parent strategy.
+Each Strategy has an Info object that keeps track of the data relevant to its parent strategy.
 
 ## public int getSelfScore()
 This method returns the current score of the strategy.
