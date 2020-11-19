@@ -264,7 +264,7 @@ public class Info {
 		return totalOppScore;
 	}
 	
-	public int getTotalR() {
+	int getTotalR() {
 		return totalR;
 	}
 
@@ -276,7 +276,7 @@ public class Info {
 		return totalT;
 	}
 
-	public int getTotalP() {
+	int getTotalP() {
 		return totalP;
 	}
 	
@@ -284,7 +284,7 @@ public class Info {
 		return roundsPlayed;
 	}
 
-	public int getOpponentsPlayed() {
+	int getOpponentsPlayed() {
 		return opponentsPlayed;
 	}
 
