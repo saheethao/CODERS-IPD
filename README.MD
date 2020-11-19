@@ -48,5 +48,31 @@ public class MyStrategy extends Strategy {
 }
 ```
 
+# Info.java
+This class contains get methods.
 
+Strategy has an Info object that keeps track of the data relevant to its parent strategy.
 
+## public int getSelfScore()
+This method returns the current score of the strategy.
+
+## public int getOppScore()
+This method returns the current score of the opponent strategy.
+
+## public int[] getSelfMoves()
+This method returns an array of moves the strategy has played. Values of -1 indicate moves that haven't been played. Contains values of 0 or 1 up to index roundsPlayed.
+
+## public int[] getOppMoves()
+This method returns an array of moves your opponent has played. Values of -1 indicate moves that haven't been played. Contains values of 0 or 1 up to index roundsPlayed.
+
+## public int getR()
+This method returns the amount of times the strategy has recieved the payoff R (3)
+
+## public int getS()
+This method returns the amount of times the strategy has recieved the payoff S (0)
+
+## public int getT()
+This method returns the amount of times the strategy has recieved the payoff T (5)
+
+## public int getP()
+This method returns the amount of times the strategy has recieved the payoff P (1)
