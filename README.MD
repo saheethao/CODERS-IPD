@@ -1,8 +1,23 @@
-# How to run
-Either import this into Eclipse or compile Game.java.
-The main method is in Game.java
+# CODERS IPD
 
-# How to make a strategy
+## Introduction
+Please read [ipd.md](https://github.com/saheethao/CODERS-IPD/blob/main/ipd.md) discussing the iterated prisoner's dilemma (IPD).
+
+## How to run
+Either import this into Eclipse or compile Game.java.
+
+## Directory Structure
+```
+├── bin
+├── src
+   ├── game    This directory contains files used for the logic of IPD and the tournament.
+   ├── strat   This directory contains java files which are the strategies. ADD YOUR STRATEGY HERE.
+├── config.properties  Edit this file to change properties of the tournament
+├── IPD.md             Displays information about IPD
+├── LICNESE
+└── readme.md          This file
+```
+## How to make a strategy
 The strategy must extend Strategy.java and must be in strat.
 
 Below is a template for a strategy:
@@ -13,34 +28,38 @@ public class MyStrategy extends Strategy {
 	/*
 	 * Global variables here
 	 */
+    
+    /**
+     * @constructor intialize your global variables
+     */
 	public Cooperate() {
 		super();
 	}
 
 	/**
-	 * Return 0 or 1. Make the strategy here.
+     * Make the strategy here
+	 * @return 0 or 1
 	 */
 	protected int generateMove() {
 		return 0;
 	}
 	
 	/**
-	 *
-	 * Some strategies need to reinitialize. This is called before each match between strategies.
+	 * Some strategies need to reinitialize their global variables. This is called before each match between strategies.
 	 */
 	public void reinit() {
 		/* reinitialize global variables */
 	}
 	
 	/**
-	 * Returns the name of your strategy. Maybe its called "70% chance to cooperate" or "Elizabeth". Your choice.
+	 * @return the name of your strategy. Maybe its called "70% chance to cooperate" or "Elizabeth". Your choice.
 	 */
 	protected String getName() {
 		return "MyStrategy";
 	}
 	
 	/**
-	 * Return your name here. You can choose to return null as well.
+	 * @return your name. You can choose to return null
 	 */
 	protected String getAuthor() {
 		return "Sahee Thao";
@@ -49,7 +68,7 @@ public class MyStrategy extends Strategy {
 ```
 
 # Info.java
-This class contains get methods.
+This class contains get methods. You can check the source code [here](https://github.com/saheethao/CODERS-IPD/blob/main/src/game/Info.java).
 
 Each Strategy has an Info object that keeps track of the data relevant to its parent strategy.
 
@@ -82,9 +101,12 @@ This method returns the amount of rounds played.
 
 # How do I get the last move my opponent played?
 ```java
-/* Somewhere in child strategy */
+/* Somewhere in generateMove() */
 int rounds = info.getRoundsPlayed();
 int[] oppMoves = info.getOppMoves();
 // Be aware of index out of bounds exceptions
 int oppMove = oppMoves[info.getRoundsPlayed() - 1]; // This will be the opponent's last move. 
 ```
+
+# Feedback
+You can directly contact `@saheemax` on the discord channel or as a direct message if you have any questions or suggestions.
