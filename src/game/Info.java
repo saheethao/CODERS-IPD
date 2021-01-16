@@ -25,7 +25,16 @@ public class Info {
     private int s; // Payoff S - Total
     private int t; // Payoff T - Total
     private int p; // Payoff P - Total
+    
+    private int selfScorePlace;
+    private int oppScorePlace;
+    private int scoreDiffPlace;
+    private int rPlace;
+    private int sPlace;
+    private int tPlace;
+    private int pPlace;
 
+    
     private int[] selfMoves; // History of your moves so far
     private int[] oppMoves; // History of you're opponent's moves so far
 
@@ -106,45 +115,6 @@ public class Info {
 
     }
 
-    void totalReset() {
-        selfScore = 0;
-        oppScore = 0;
-        selfMoves = new int[150];
-        Arrays.fill(selfMoves, -1); // Set to -1 (not played)
-        oppMoves = new int[150];
-        Arrays.fill(oppMoves, -1); // Set to -1 (not played)
-        roundsPlayed = 0;
-
-        r = 0;
-        s = 0;
-        t = 0;
-        p = 0;
-
-        totalSelfScore = 0;
-        totalOppScore = 0;
-        totalR = 0;
-        totalS = 0;
-        totalT = 0;
-        totalP = 0;
-        opponentsPlayed = 0;
-
-        totalSelfScorePlace = 0;
-        totalOppScorePlace = 0;
-        totalScoreDiffPlace = 0;
-        totalRPlace = 0;
-        totalSPlace = 0;
-        totalTPlace = 0;
-        totalPPlace = 0;
-
-        meanSelfScorePlace = 0;
-        meanOppScorePlace = 0;
-        meanScoreDiffPlace = 0;
-        meanRPlace = 0;
-        meanSPlace = 0;
-        meanTPlace = 0;
-        meanPPlace = 0;
-    }
-
     /**
      * Reset all attributes to original values and updates totals
      */
@@ -169,6 +139,21 @@ public class Info {
         s = 0;
         t = 0;
         p = 0;
+        selfScorePlace = 0;
+        oppScorePlace = 0;
+        scoreDiffPlace = 0;
+        rPlace = 0;
+        sPlace = 0;
+        tPlace = 0;
+        pPlace = 0;
+        
+        totalSelfScorePlace += selfScorePlace;
+        totalOppScorePlace += oppScorePlace;
+        totalScoreDiffPlace += scoreDiffPlace;
+        totalRPlace += rPlace;
+        totalSPlace += sPlace;
+        totalTPlace += tPlace;
+        totalPPlace += pPlace;
     }
 
     /**
@@ -177,7 +162,7 @@ public class Info {
     void calculateMeans() {
         meanSelfScore = ((double) totalSelfScore / opponentsPlayed);
         meanOppScore = ((double) totalOppScore / opponentsPlayed);
-        meanScoreDiff = Math.abs(meanOppScore - meanSelfScore);
+        meanScoreDiff = meanSelfScore - meanOppScore;
         meanR = ((double) totalR / opponentsPlayed);
         meanS = ((double) totalS / opponentsPlayed);
         meanT = ((double) totalT / opponentsPlayed);
@@ -380,7 +365,63 @@ public class Info {
     void setMeanPPlace(double meanPPlace) {
         this.meanPPlace = meanPPlace;
     }
-
+    
+    void setSelfScorePlace(int selfScorePlace) {
+        this.selfScorePlace = selfScorePlace;
+    }
+    
+    int getSelfScorePlace() {
+        return selfScorePlace;
+    }
+    
+    void setOppScorePlace(int oppScorePlace) {
+        this.oppScorePlace = oppScorePlace;
+    }
+    
+    int getOppScorePlace() {
+        return oppScorePlace;
+    }
+    
+    void setScoreDiffPlace(int scoreDiffPlace) {
+        this.scoreDiffPlace = scoreDiffPlace;
+    }
+    
+    int getScoreDiffPlace() {
+        return scoreDiffPlace;
+    }
+    
+    void setRPlace(int rPlace) {
+        this.rPlace = rPlace;
+    }
+    
+    int getRPlace() {
+        return rPlace;
+    }
+    
+    void setSPlace(int sPlace) {
+        this.sPlace = sPlace;
+    }
+    
+    int getSPlace() {
+        return sPlace;
+    }
+    
+    void setTPlace(int tPlace) {
+        this.tPlace = tPlace;
+    }
+    
+    int getTPlace() {
+        return tPlace;
+    }
+    
+    void setPPlace(int pPlace) {
+        this.pPlace = pPlace;
+    }
+    
+    int getPPlace() {
+        return pPlace;
+    }
+    
     public String toString() {
         calculateMeans();
         String out = "";

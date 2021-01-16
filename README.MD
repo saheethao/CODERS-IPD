@@ -1,10 +1,45 @@
 # CODERS IPD
+CODERS will be running a tournament playing the iterated prisoner's dilemma (IPD).
 
 ## Introduction
 Please read [ipd.md](https://github.com/saheethao/CODERS-IPD/blob/main/ipd.md) discussing the iterated prisoner's dilemma (IPD).
 
 ## How to run
 Either import this into Eclipse or compile Game.java.
+
+## Tournament Results
+After running Game, the following output should appear:
+
+```
+Strategies found: [] // All strategies found in Stat
+Exlcuding: []        // Prints strategies excluded in config.properties & Strategy
+
+--- Round Robin Tournament ---
+
+--- Self Score ---
+... // Prints the strategy and their mean self score in descending order
+
+--- Opp Score ---
+... // Prints the strategy and their mean opponent's score in descending order
+
+--- Score Diff ---
+... // Prints the strategy and the difference between the mean self score and mean opponent's score in descending order
+
+--- Score Abs Diff ---
+... // Prints the strategy and the absolute value of the above in descending order
+
+
+--- Payoff R ---
+... // Prints the strategy and the mean amount of payoff R it recieved in a game in descending order
+
+--- Payoff S ---
+... // Prints the strategy and the mean amount of payoff S it recieved in a game in descending order
+
+--- Payoff T ---
+... // Prints the strategy and the mean amount of payoff T it recieved in a game in descending order
+
+--- Payoff P ---
+... // Prints the strategy and the mean amount of payoff P it recieved in a game in descending order
 
 ## Directory Structure
 ```
@@ -21,6 +56,7 @@ Either import this into Eclipse or compile Game.java.
 The strategy must extend Strategy.java and must be in strat.
 
 Below is a template for a strategy:
+
 ```java
 package strat;
 

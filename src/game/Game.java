@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.Properties;
 
 import strat.Strategy;
@@ -14,7 +15,8 @@ import strat.Strategy;
 public class Game {
 
     private ArrayList<Strategy> strategies;
-
+    private final String DECORATION = "---";
+    private int trials = 300;
     public Game() {
         ArrayList<String> results = new ArrayList<String>();
         Properties prop = new Properties();
@@ -33,6 +35,12 @@ public class Game {
             if (exclude != null) {
                 ignore = exclude.split(",");
             }
+            
+            String trialsStr = prop.getProperty("trials");
+            if (trialsStr != null) {
+                trials = Integer.parseInt(trialsStr);
+            }
+            System.out.println("Trials: " + trials);
         } catch (IOException ex) {
             ex.printStackTrace();
         } finally {
@@ -62,9 +70,116 @@ public class Game {
         System.out.println("Strategies found: " + results);
         System.out.println("Excluding: " + ignoreList);
 
+        int i;
+        createStrategies(results, ignoreList);
+        
+        System.out.println("\n" + DECORATION + " Round Robin Tournament " + DECORATION);
+        System.out.println();
+        for (i = 0; i < trials; i++) {
+            roundRobin(strategies);
+        }
+        for (Strategy s : strategies) {
+            s.getInfo().calculateMeans();
+        }
+
+        /* Self Score */
+        System.out.println(DECORATION + " Self Score " + DECORATION);
+        //strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanSelfScore() - a.getInfo().getMeanSelfScore()));
+        strategies.sort((a, b) -> new Double(b.getInfo().getMeanSelfScore()).compareTo(new Double(a.getInfo().getMeanSelfScore())));
+        for (Strategy s : strategies) {
+            System.out.printf("%6.2f %s\n", s.getInfo().getMeanSelfScore(), s);
+        }
+        System.out.println();
+//
+//        strategies.sort((a, b) -> (int) Math.round(a.getInfo().getMeanSelfScore() - b.getInfo().getMeanSelfScore()));
+//        System.out.println("Min Self Score");
+//        for (Strategy s : strategies) {
+//            System.out.printf("%6.2f %s\n", s.getInfo().getMeanSelfScore(), s);
+//        }
+//        System.out.println();
+
+        /* Opp Score */
+        System.out.println(DECORATION + " Opp Score " + DECORATION);
+        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanOppScore() - a.getInfo().getMeanOppScore()));
+        for (Strategy s : strategies) {
+            System.out.printf("%6.2f %s\n", s.getInfo().getMeanOppScore(), s);
+        }
+        System.out.println();
+
+//        strategies.sort((a, b) -> (int) Math.round(a.getInfo().getMeanOppScore() - b.getInfo().getMeanOppScore()));
+//        System.out.println("Min Opp Score");
+//        for (Strategy s : strategies) {
+//            System.out.printf("%6.2f %s\n", s.getInfo().getMeanOppScore(), s);
+//        }
+//        System.out.println();
+
+        /* Score Diff */
+        System.out.println(DECORATION + " Score Diff " + DECORATION);
+
+        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanScoreDiff() - a.getInfo().getMeanScoreDiff()));
+        for (Strategy s : strategies) {
+            System.out.printf("%6.2f %s\n", s.getInfo().getMeanScoreDiff(), s);
+        }
+        System.out.println();
+
+//        strategies.sort((a, b) -> (int) Math.round(a.getInfo().getMeanScoreDiff() - b.getInfo().getMeanScoreDiff()));
+//        System.out.println("Min Score Diff");
+//        for (Strategy s : strategies) {
+//            System.out.printf("%6.2f %s\n", s.getInfo().getMeanScoreDiff(), s);
+//        }
+//        System.out.println();
+        
+        /* Score Abs Diff */
+        System.out.println(DECORATION + " Score Abs Diff " + DECORATION);
+
+        strategies.sort((a, b) -> (int) Math.round(
+                Math.abs(b.getInfo().getMeanScoreDiff()) - Math.abs(a.getInfo().getMeanScoreDiff())
+                ));
+        for (Strategy s : strategies) {
+            System.out.printf("%6.2f %s\n", Math.abs(s.getInfo().getMeanScoreDiff()), s);
+        }
+        System.out.println();
+
+        /* Max R */
+        System.out.println(DECORATION + " Payoff R " + DECORATION);
+
+        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanR() - a.getInfo().getMeanR()));
+        for (Strategy s : strategies) {
+            System.out.printf("%6.2f %s\n", s.getInfo().getMeanR(), s);
+        }
+        System.out.println();
+
+        /* Max S */
+        System.out.println(DECORATION + " Payoff S " + DECORATION);
+
+        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanS() - a.getInfo().getMeanS()));
+        for (Strategy s : strategies) {
+            System.out.printf("%6.2f %s\n", s.getInfo().getMeanS(), s);
+        }
+        System.out.println();
+
+        /* Max T */
+        System.out.println(DECORATION + " Payoff T " + DECORATION);
+
+        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanT() - a.getInfo().getMeanT()));
+        for (Strategy s : strategies) {
+            System.out.printf("%6.2f %s\n", s.getInfo().getMeanT(), s);
+        }
+        System.out.println();
+
+        /* Max P */
+        System.out.println(DECORATION + " Payoff P " + DECORATION);
+
+        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanP() - a.getInfo().getMeanP()));
+        for (Strategy s : strategies) {
+            System.out.printf("%6.2f %s\n", s.getInfo().getMeanP(), s);
+        }
+        System.out.println();
+    }
+    
+    private void createStrategies(ArrayList<String> results, ArrayList<String> ignoreList) {
         strategies = new ArrayList<Strategy>();
 
-        int i = 0;
         for (String stratClassName : results) {
             if (ignoreList.contains(stratClassName)) {
                 continue;
@@ -74,7 +189,7 @@ public class Game {
             try {
                 s = (Strategy) Class.forName("strat." + stratClassName).newInstance();
                 s.setId(1);
-				strategies.add(s);
+                strategies.add(s);
                 s = (Strategy) Class.forName("strat." + stratClassName).newInstance();
                 s.setId(2);
                  strategies.add(s);
@@ -85,101 +200,8 @@ public class Game {
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
-            i++;
         }
         Collections.shuffle(strategies);
-        System.out.println("Round Robin Tournament");
-        System.out.println();
-        for (i = 0; i < 1; i++) {
-            roundRobin(strategies);
-        }
-        for (Strategy s : strategies) {
-            s.getInfo().calculateMeans();
-        }
-
-        /* Self Score */
-        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanSelfScore() - a.getInfo().getMeanSelfScore()));
-        System.out.println("Max Self Score");
-        for (Strategy s : strategies) {
-            System.out.printf("%6.2f %s\n", s.getInfo().getMeanSelfScore(), s);
-        }
-        System.out.println();
-
-        strategies.sort((a, b) -> (int) Math.round(a.getInfo().getMeanSelfScore() - b.getInfo().getMeanSelfScore()));
-        System.out.println("Min Self Score");
-        for (Strategy s : strategies) {
-            System.out.printf("%6.2f %s\n", s.getInfo().getMeanSelfScore(), s);
-        }
-        System.out.println();
-
-        /* Opp Score */
-        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanOppScore() - a.getInfo().getMeanOppScore()));
-        System.out.println("Max Opp Score");
-        for (Strategy s : strategies) {
-            System.out.printf("%6.2f %s\n", s.getInfo().getMeanOppScore(), s);
-        }
-        System.out.println();
-
-        strategies.sort((a, b) -> (int) Math.round(a.getInfo().getMeanOppScore() - b.getInfo().getMeanOppScore()));
-        System.out.println("Min Opp Score");
-        for (Strategy s : strategies) {
-            System.out.printf("%6.2f %s\n", s.getInfo().getMeanOppScore(), s);
-        }
-        System.out.println();
-
-        /* Score Diff */
-        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanScoreDiff() - a.getInfo().getMeanScoreDiff()));
-        System.out.println("Max Score Diff");
-        for (Strategy s : strategies) {
-            System.out.printf("%6.2f %s\n", s.getInfo().getMeanScoreDiff(), s);
-        }
-        System.out.println();
-
-        strategies.sort((a, b) -> (int) Math.round(a.getInfo().getMeanScoreDiff() - b.getInfo().getMeanScoreDiff()));
-        System.out.println("Min Score Diff");
-        for (Strategy s : strategies) {
-            System.out.printf("%6.2f %s\n", s.getInfo().getMeanScoreDiff(), s);
-        }
-        System.out.println();
-
-        /* Max R */
-        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanR() - a.getInfo().getMeanR()));
-        System.out.println("Max R");
-        for (Strategy s : strategies) {
-            System.out.printf("%6.2f %s\n", s.getInfo().getMeanR(), s);
-        }
-        System.out.println();
-
-        /* Max S */
-        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanS() - a.getInfo().getMeanS()));
-        System.out.println("Max S");
-        for (Strategy s : strategies) {
-            System.out.printf("%6.2f %s\n", s.getInfo().getMeanS(), s);
-        }
-        System.out.println();
-
-        /* Max T */
-        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanT() - a.getInfo().getMeanT()));
-        System.out.println("Max T");
-        for (Strategy s : strategies) {
-            System.out.printf("%6.2f %s\n", s.getInfo().getMeanT(), s);
-        }
-        System.out.println();
-
-        /* Max P */
-        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanP() - a.getInfo().getMeanP()));
-        System.out.println("Max P");
-        for (Strategy s : strategies) {
-            System.out.printf("%6.2f %s\n", s.getInfo().getMeanP(), s);
-        }
-        System.out.println();
-
-        for (Strategy s : strategies) {
-            s.getInfo().totalReset();
-        }
-
-        /* Elimination TODO */
-
     }
 
     public void roundRobin(ArrayList<Strategy> strategies) {
