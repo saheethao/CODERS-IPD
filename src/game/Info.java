@@ -2,9 +2,9 @@
 * This class contains get methods to access information about the surroundings and other agents for strategies
 * Contains set methods used to update info by Game
 * 
-* @author  Sahee Thao
-* @version 1.0.0
-* @since   2020-11-18
+* @author Sahee Thao
+* @date 01/15/20
+* @version 1.2.0
 */
 package game;
 

@@ -7,6 +7,14 @@ Please read [ipd.md](https://github.com/saheethao/CODERS-IPD/blob/main/ipd.md) d
 ## How to run
 Either import this into Eclipse or compile Game.java.
 
+`config.properties` can be modified to edit the number of trials and to exclude certain strategies in the tournament.
+
+## Tournament Format
+After all strategies are submitted, the tournament will run 1000 trials with all strategies.
+Each strategy will be evaluated on the categories displayed in the tournament results.
+Placements of 1st, 2nd, and 3rd exist for the maximizing and minimizing each category. 
+For example, strategies will place for having the maximum self score or the minimal self score.
+
 ## Tournament Results
 After running Game, the following output should appear:
 
@@ -41,8 +49,9 @@ Exlcuding: []        // Prints strategies excluded in config.properties & Strate
 --- Payoff P ---
 ... // Prints the strategy and the mean amount of payoff P it recieved in a game in descending order
 
-## Directory Structure
 ```
+
+## Directory Structure
 ├── bin
 ├── src
    ├── game    This directory contains files used for the logic of IPD and the tournament.
@@ -51,7 +60,7 @@ Exlcuding: []        // Prints strategies excluded in config.properties & Strate
 ├── IPD.md             Displays information about IPD
 ├── LICNESE
 └── readme.md          This file
-```
+
 ## How to make a strategy
 The strategy must extend Strategy.java and must be in strat.
 

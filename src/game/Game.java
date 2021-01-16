@@ -1,3 +1,10 @@
+/**
+ * Manages all the logic of the tournament and IPD
+ * 
+ * @author Sahee Thao
+ * @date 01/15/20
+ * @version 1.2.0
+ */
 package game;
 
 import java.io.File;
@@ -100,7 +107,7 @@ public class Game {
 
         /* Opp Score */
         System.out.println(DECORATION + " Opp Score " + DECORATION);
-        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanOppScore() - a.getInfo().getMeanOppScore()));
+        strategies.sort((a, b) -> new Double(b.getInfo().getMeanOppScore()).compareTo(new Double(a.getInfo().getMeanOppScore())));
         for (Strategy s : strategies) {
             System.out.printf("%6.2f %s\n", s.getInfo().getMeanOppScore(), s);
         }
@@ -116,7 +123,7 @@ public class Game {
         /* Score Diff */
         System.out.println(DECORATION + " Score Diff " + DECORATION);
 
-        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanScoreDiff() - a.getInfo().getMeanScoreDiff()));
+        strategies.sort((a, b) -> new Double(b.getInfo().getMeanScoreDiff()).compareTo(a.getInfo().getMeanScoreDiff()));
         for (Strategy s : strategies) {
             System.out.printf("%6.2f %s\n", s.getInfo().getMeanScoreDiff(), s);
         }
@@ -133,7 +140,7 @@ public class Game {
         System.out.println(DECORATION + " Score Abs Diff " + DECORATION);
 
         strategies.sort((a, b) -> (int) Math.round(
-                Math.abs(b.getInfo().getMeanScoreDiff()) - Math.abs(a.getInfo().getMeanScoreDiff())
+                new Double(Math.abs(b.getInfo().getMeanScoreDiff())).compareTo(new Double(Math.abs(a.getInfo().getMeanScoreDiff())))
                 ));
         for (Strategy s : strategies) {
             System.out.printf("%6.2f %s\n", Math.abs(s.getInfo().getMeanScoreDiff()), s);
@@ -143,7 +150,7 @@ public class Game {
         /* Max R */
         System.out.println(DECORATION + " Payoff R " + DECORATION);
 
-        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanR() - a.getInfo().getMeanR()));
+        strategies.sort((a, b) -> new Double(b.getInfo().getMeanR()).compareTo(new Double(a.getInfo().getMeanR())));
         for (Strategy s : strategies) {
             System.out.printf("%6.2f %s\n", s.getInfo().getMeanR(), s);
         }
@@ -152,7 +159,7 @@ public class Game {
         /* Max S */
         System.out.println(DECORATION + " Payoff S " + DECORATION);
 
-        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanS() - a.getInfo().getMeanS()));
+        strategies.sort((a, b) -> new Double(b.getInfo().getMeanS()).compareTo(new Double(a.getInfo().getMeanS())));
         for (Strategy s : strategies) {
             System.out.printf("%6.2f %s\n", s.getInfo().getMeanS(), s);
         }
@@ -161,7 +168,7 @@ public class Game {
         /* Max T */
         System.out.println(DECORATION + " Payoff T " + DECORATION);
 
-        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanT() - a.getInfo().getMeanT()));
+        strategies.sort((a, b) -> new Double(b.getInfo().getMeanT()).compareTo(new Double(a.getInfo().getMeanT())));
         for (Strategy s : strategies) {
             System.out.printf("%6.2f %s\n", s.getInfo().getMeanT(), s);
         }
@@ -170,7 +177,7 @@ public class Game {
         /* Max P */
         System.out.println(DECORATION + " Payoff P " + DECORATION);
 
-        strategies.sort((a, b) -> (int) Math.round(b.getInfo().getMeanP() - a.getInfo().getMeanP()));
+        strategies.sort((a, b) -> new Double(b.getInfo().getMeanP()).compareTo(new Double(a.getInfo().getMeanP())));
         for (Strategy s : strategies) {
             System.out.printf("%6.2f %s\n", s.getInfo().getMeanP(), s);
         }
