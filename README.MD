@@ -157,5 +157,12 @@ int[] oppMoves = info.getOppMoves();
 int oppMove = oppMoves[info.getRoundsPlayed() - 1]; // This will be the opponent's last move. Either 0 or 1.
 ```
 
+# Submission
+To submit your java file, drop it on Discord in a channel with an `@saheemax` or in a direct message to `@saheemax`.
+
+Please have your submission(s) in before Feburary 15th!
+
+You can submit more than one strategy!
+
 # Feedback
 You can directly contact `@saheemax` on the discord channel or as a direct message if you have any questions or suggestions.
