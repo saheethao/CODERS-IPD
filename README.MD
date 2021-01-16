@@ -2,7 +2,7 @@
 CODERS will be running a tournament playing the iterated prisoner's dilemma (IPD).
 
 ## Introduction
-Please read [ipd.md](https://github.com/saheethao/CODERS-IPD/blob/main/ipd.md) discussing the iterated prisoner's dilemma (IPD).
+Please read [IPD.md](https://github.com/saheethao/CODERS-IPD/blob/main/IPD.md) discussing the iterated prisoner's dilemma (IPD).
 
 ## How to run
 Either import this into Eclipse or compile Game.java.
@@ -12,7 +12,7 @@ Either import this into Eclipse or compile Game.java.
 ## Tournament Format
 After all strategies are submitted, the tournament will run 1000 trials with all strategies.
 Each strategy will be evaluated on the categories displayed in the tournament results.
-Placements of 1st, 2nd, and 3rd exist for the maximizing and minimizing each category. 
+Placements of 1st, 2nd, and 3rd exist for the maximizing and minimizing each category.
 For example, strategies will place for having the maximum self score or the minimal self score.
 
 ## Tournament Results
