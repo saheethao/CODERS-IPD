@@ -11,7 +11,7 @@ P1\P2 | C | D
 **C** | (3,3) | (0,5)
 **D** | (5,0) | (1,1)
 
-The Nash equilibrium of is mutual defection, that is both players choose **D**.
+The Nash equilibrium of is mutual defection - that is both players choose **D**.
 
 ### In Generalized Form
 Below are the same payoffs in a generalized form. The payoffs are denoted as R (reward), T (temptation), S (sucker), P (penalty).
@@ -21,7 +21,7 @@ P1\P2 | C | D
 **C** | (R,R) | (S,T)
 **D** | (T,S) | (P,P)
 
-The following condition must hold for the payoffs:T>R>P>S
+The following condition must hold for the payoffs: T>R>P>S
 
 The standard payoff quantities are:
 
@@ -33,7 +33,7 @@ T | 5
 P | 1
 
 ## The Iterated Prisoner's Dilemma
-The iterated prisoner's dilemma (IPD) is simply the prisoner's dilemma played over multiple rounds. For example, this IPD game will for 5 rounds.
+The iterated prisoner's dilemma (IPD) is simply the prisoner's dilemma played over multiple rounds. For example, this IPD game will consist of 5 rounds.
 Round | P1 Action | P2 Action | P1 Payoff | P2 Payoff
 :------------: | :-------------: | :-------------: | :-------------: | :-------------:
 1 | C | D | S | T 
@@ -51,8 +51,8 @@ Name | Strategy
 :-------: | :------------: 
 Always Cooperate | This strategy always chooses the action C
 Always Defect | This strategy always chooses the action D
-Random | This strategy randomly chooses C or D with equal chance
-Grim | This strategy always chooses C unless the opponent has chosen D. If that is the case, they always choose D
+Random | This strategy randomly chooses action C or action D with equal chance
+Grim | This strategy always chooses action C unless the opponent has chosen action D. If that is the case, they always choose action D
 Majority | This strategy chooses action C on the first round. On all subsequent rounds, this strategy examines the history of the other player's actions, counting the total number of Cs and Ds by the other player. If the other player's Ds outnumber their Cs, this strategy will choose action C; otherwise this strategy will choose action D.
 Tit-for-Tat | This strategy chooses action C on the first round. On all subsequent rounds, his strategy plays the action the other player choose in the previous round.
 

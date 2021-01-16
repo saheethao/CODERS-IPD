@@ -1,16 +1,16 @@
 # CODERS IPD
-CODERS will be running a tournament playing the iterated prisoner's dilemma (IPD).
+CODERS will be running a tournament regarding the iterated prisoner's dilemma (IPD).
 
 ## Introduction
 Please read [IPD.md](https://github.com/saheethao/CODERS-IPD/blob/main/IPD.md) discussing the iterated prisoner's dilemma (IPD).
 
 ## How to run
-Either import this into Eclipse or compile Game.java.
+Either import this into the IDE of your choice (such as Eclipse) or compile Game.java.
 
 `config.properties` can be modified to edit the number of trials and to exclude certain strategies in the tournament.
 
 ## Tournament Format
-After all strategies are submitted, the tournament will run 1000 trials with all strategies.
+After all strategies are submitted, the final tournament will run 1000 trials with all strategies. The default trials is 300 in `config.properties`.
 Each strategy will be evaluated on the categories displayed in the tournament results.
 Placements of 1st, 2nd, and 3rd exist for the maximizing and minimizing each category.
 For example, strategies will place for having the maximum self score or the minimal self score.
@@ -52,6 +52,7 @@ Exlcuding: []        // Prints strategies excluded in config.properties & Strate
 ```
 
 ## Directory Structure
+```
 ├── bin
 ├── src
    ├── game    This directory contains files used for the logic of IPD and the tournament.
@@ -60,6 +61,7 @@ Exlcuding: []        // Prints strategies excluded in config.properties & Strate
 ├── IPD.md             Displays information about IPD
 ├── LICNESE
 └── readme.md          This file
+```
 
 ## How to make a strategy
 The strategy must extend Strategy.java and must be in strat.
@@ -113,9 +115,11 @@ public class MyStrategy extends Strategy {
 ```
 
 # Info.java
-This class contains get methods. You can check the source code [here](https://github.com/saheethao/CODERS-IPD/blob/main/src/game/Info.java).
+This class contains many get methods used for your strategy. You can check the source code [here](https://github.com/saheethao/CODERS-IPD/blob/main/src/game/Info.java).
 
 Each Strategy has an Info object that keeps track of the data relevant to its parent strategy.
+
+Below are important methods you can call for your strategy.
 
 ## public int getSelfScore()
 This method returns the current score of the strategy.
@@ -150,7 +154,7 @@ This method returns the amount of rounds played.
 int rounds = info.getRoundsPlayed();
 int[] oppMoves = info.getOppMoves();
 // Be aware of index out of bounds exceptions
-int oppMove = oppMoves[info.getRoundsPlayed() - 1]; // This will be the opponent's last move. 
+int oppMove = oppMoves[info.getRoundsPlayed() - 1]; // This will be the opponent's last move. Either 0 or 1.
 ```
 
 # Feedback
