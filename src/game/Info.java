@@ -69,9 +69,9 @@ public class Info {
      * Constructor
      */
     public Info() {
-        selfMoves = new int[150];
+        selfMoves = new int[1000];
         Arrays.fill(selfMoves, -1); // Set to -1 (not played)
-        oppMoves = new int[150];
+        oppMoves = new int[1000];
         Arrays.fill(oppMoves, -1); // Set to -1 (not played)
     }
 
@@ -129,9 +129,9 @@ public class Info {
 
         selfScore = 0;
         oppScore = 0;
-        selfMoves = new int[150];
+        selfMoves = new int[1000];
         Arrays.fill(selfMoves, -1); // Set to -1 (not played)
-        oppMoves = new int[150];
+        oppMoves = new int[1000];
         Arrays.fill(oppMoves, -1); // Set to -1 (not played)
         roundsPlayed = 0;
 

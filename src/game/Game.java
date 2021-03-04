@@ -24,6 +24,7 @@ public class Game {
     private ArrayList<Strategy> strategies;
     private final String DECORATION = "---";
     private int trials = 300;
+    private int copies = 1;
     public Game() {
         ArrayList<String> results = new ArrayList<String>();
         Properties prop = new Properties();
@@ -48,6 +49,12 @@ public class Game {
                 trials = Integer.parseInt(trialsStr);
             }
             System.out.println("Trials: " + trials);
+            
+            String copiesStr = prop.getProperty("copies");
+            if (copiesStr != null) {
+                copies = Integer.parseInt(copiesStr);
+            }
+            System.out.println("Copies: " + copies);
         } catch (IOException ex) {
             ex.printStackTrace();
         } finally {
@@ -83,8 +90,12 @@ public class Game {
         System.out.println("\n" + DECORATION + " Round Robin Tournament " + DECORATION);
         System.out.println();
         for (i = 0; i < trials; i++) {
+            if (i % 25 == 0 && i != 0) {
+                System.out.println("...at trial " + i);
+            }
             roundRobin(strategies);
         }
+        System.out.println();
         for (Strategy s : strategies) {
             s.getInfo().calculateMeans();
         }
@@ -194,12 +205,16 @@ public class Game {
             Strategy s = null;
 
             try {
-                s = (Strategy) Class.forName("strat." + stratClassName).newInstance();
-                s.setId(1);
-                strategies.add(s);
-                s = (Strategy) Class.forName("strat." + stratClassName).newInstance();
-                s.setId(2);
-                 strategies.add(s);
+                if (copies == 0) {
+                    s = (Strategy) Class.forName("strat." + stratClassName).newInstance();
+                    strategies.add(s);
+                } else {
+                    for (int i = 1; i <= copies + 1; i++) {
+                        s = (Strategy) Class.forName("strat." + stratClassName).newInstance();
+                        s.setId(i);
+                        strategies.add(s); 
+                    }
+                }
             } catch (InstantiationException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {
