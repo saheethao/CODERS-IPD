@@ -1,0 +1,953 @@
+Each tournament consists of 10,000 round robin games
+
+Tournament 1 - Consists of ALL strategies and an additional copy of ALL strategies
+Tournament 2 - Consists of ALL strategies
+Tournament 3 - Consists of user created strategies and an additional copy of user created strategies
+Tournament 4 - Consists of user created strategies
+
+Self Score - The mean score that the strategy achieved
+Opp Score  - The mean score that the strategy's opponent achieved
+Score Diff - The mean of the difference between the strategy's score and their opponent's score
+Score Abs Diff - The absolute of the above result
+Payoff R - The mean amount of R this strategy recieved. This indicates how cooperative the strategy is
+Payoff S - The mean amount of S this strategy recieved. This indicates how naive the strategy is
+Payoff T - The mean amount of S this strategy recieved. This indicates how exploitative the strategy is
+Payoff P - The mean amount of S this strategy recieved. This indicates how stubborn the strategy is
+
+
+--- Tournament 1 ---
+
+--- Self Score ---
+416.33 Lenient Grim 2
+403.02 Grim 1
+391.67 Lenient Grim 1
+385.73 Copier Shifted 2 (Sahee)
+385.23 Stable Shifter 2 (Sahee)
+383.78 Tit for Tat 1
+383.51 Evil Elise B GA 1 (Elise B)
+382.78 Grim 2
+382.74 Evil Elise B GA 2 (Elise B)
+381.13 Copier Shifted 1 (Sahee)
+379.31 Tit for Tat 2
+372.10 RooRue 1 (Laik)
+369.24 RooRue 2 (Laik)
+368.95 Soft Majority 2
+366.43 Stable Shifter 1 (Sahee)
+362.43 Prober 2
+360.51 Prober 1
+360.40 Shifter 2 (Sahee)
+358.39 Soft Majority 1
+355.80 Shifter 1 (Sahee)
+347.95 Tit for Two Tats 2
+346.29 Copier 2 (Sahee)
+346.26 Tit for Two Tats 1
+345.65 CCD 1
+343.21 Copier 1 (Sahee)
+342.66 Defect 2
+340.79 Static Genetic Algorithm 2 (Bennett Wendorf)
+339.51 Defect 1
+339.36 CD 1
+339.03 Static Genetic Algorithm 1 (Bennett Wendorf)
+336.86 CD 2
+336.29 Suspicious Tit for Tat 1
+336.06 Elise B 1 (Elise B)
+333.86 Elise B 2 (Elise B)
+329.87 Random 1
+327.64 Elise B GA 1 (Elise B)
+326.56 Evil Elise B 2 (Elise B)
+325.42 CCD 2
+321.04 Hard Majority 1
+320.37 Elise B GA 2 (Elise B)
+319.09 Hard Majority 2
+317.10 Suspicious Tit for Tat 2
+315.48 Random 2
+308.80 Evil Elise B 1 (Elise B)
+308.22 Cooperate 1
+303.36 Inverse Tit for Tat 1
+302.41 Cooperate 2
+302.22 Inverse Tit for Tat 2
+278.65 Invert Copier 1 (Sahee)
+262.70 Invert Copier 2 (Sahee)
+
+--- Opp Score ---
+548.39 Cooperate 2
+544.52 Cooperate 1
+450.47 Tit for Two Tats 1
+439.14 Soft Majority 2
+432.98 Tit for Two Tats 2
+429.26 Soft Majority 1
+417.06 CCD 2
+406.48 CCD 1
+402.60 Invert Copier 2 (Sahee)
+387.41 Stable Shifter 2 (Sahee)
+387.36 Copier Shifted 2 (Sahee)
+385.41 Tit for Tat 1
+384.83 Inverse Tit for Tat 1
+384.18 Invert Copier 1 (Sahee)
+382.76 Copier Shifted 1 (Sahee)
+380.95 Tit for Tat 2
+378.88 Inverse Tit for Tat 2
+374.06 Elise B GA 1 (Elise B)
+370.41 Elise B 2 (Elise B)
+368.41 Elise B GA 2 (Elise B)
+368.41 Stable Shifter 1 (Sahee)
+368.07 Elise B 1 (Elise B)
+367.57 Shifter 2 (Sahee)
+362.57 Shifter 1 (Sahee)
+349.11 CD 2
+348.00 CD 1
+346.91 Random 2
+345.99 Copier 1 (Sahee)
+343.86 Copier 2 (Sahee)
+341.45 Static Genetic Algorithm 1 (Bennett Wendorf)
+340.78 Random 1
+340.53 Static Genetic Algorithm 2 (Bennett Wendorf)
+334.25 Suspicious Tit for Tat 1
+324.19 Hard Majority 1
+324.02 Evil Elise B 1 (Elise B)
+317.12 Evil Elise B 2 (Elise B)
+315.08 Suspicious Tit for Tat 2
+313.01 Prober 2
+311.82 Prober 1
+307.30 Hard Majority 2
+284.96 RooRue 1 (Laik)
+283.84 RooRue 2 (Laik)
+272.97 Evil Elise B GA 1 (Elise B)
+272.22 Evil Elise B GA 2 (Elise B)
+254.23 Lenient Grim 1
+249.12 Lenient Grim 2
+232.75 Grim 1
+212.05 Grim 2
+102.62 Defect 1
+101.83 Defect 2
+
+--- Score Diff ---
+240.83 Defect 2
+236.89 Defect 1
+170.73 Grim 2
+170.27 Grim 1
+167.21 Lenient Grim 2
+137.44 Lenient Grim 1
+110.53 Evil Elise B GA 1 (Elise B)
+110.52 Evil Elise B GA 2 (Elise B)
+ 87.14 RooRue 1 (Laik)
+ 85.39 RooRue 2 (Laik)
+ 49.41 Prober 2
+ 48.68 Prober 1
+ 11.79 Hard Majority 2
+  9.44 Evil Elise B 2 (Elise B)
+  2.43 Copier 2 (Sahee)
+  2.04 Suspicious Tit for Tat 1
+  2.02 Suspicious Tit for Tat 2
+  0.26 Static Genetic Algorithm 2 (Bennett Wendorf)
+ -1.63 Tit for Tat 1
+ -1.63 Copier Shifted 2 (Sahee)
+ -1.63 Copier Shifted 1 (Sahee)
+ -1.63 Tit for Tat 2
+ -1.98 Stable Shifter 1 (Sahee)
+ -2.19 Stable Shifter 2 (Sahee)
+ -2.42 Static Genetic Algorithm 1 (Bennett Wendorf)
+ -2.77 Copier 1 (Sahee)
+ -3.14 Hard Majority 1
+ -6.77 Shifter 1 (Sahee)
+ -7.17 Shifter 2 (Sahee)
+ -8.63 CD 1
+-10.91 Random 1
+-12.25 CD 2
+-15.22 Evil Elise B 1 (Elise B)
+-31.43 Random 2
+-32.01 Elise B 1 (Elise B)
+-36.55 Elise B 2 (Elise B)
+-46.41 Elise B GA 1 (Elise B)
+-48.04 Elise B GA 2 (Elise B)
+-60.83 CCD 1
+-70.19 Soft Majority 2
+-70.88 Soft Majority 1
+-76.66 Inverse Tit for Tat 2
+-81.47 Inverse Tit for Tat 1
+-85.03 Tit for Two Tats 2
+-91.64 CCD 2
+-104.20 Tit for Two Tats 1
+-105.53 Invert Copier 1 (Sahee)
+-139.90 Invert Copier 2 (Sahee)
+-236.30 Cooperate 1
+-245.98 Cooperate 2
+
+--- Score Abs Diff ---
+245.98 Cooperate 2
+240.83 Defect 2
+236.89 Defect 1
+236.30 Cooperate 1
+170.73 Grim 2
+170.27 Grim 1
+167.21 Lenient Grim 2
+139.90 Invert Copier 2 (Sahee)
+137.44 Lenient Grim 1
+110.53 Evil Elise B GA 1 (Elise B)
+110.52 Evil Elise B GA 2 (Elise B)
+105.53 Invert Copier 1 (Sahee)
+104.20 Tit for Two Tats 1
+ 91.64 CCD 2
+ 87.14 RooRue 1 (Laik)
+ 85.39 RooRue 2 (Laik)
+ 85.03 Tit for Two Tats 2
+ 81.47 Inverse Tit for Tat 1
+ 76.66 Inverse Tit for Tat 2
+ 70.88 Soft Majority 1
+ 70.19 Soft Majority 2
+ 60.83 CCD 1
+ 49.41 Prober 2
+ 48.68 Prober 1
+ 48.04 Elise B GA 2 (Elise B)
+ 46.41 Elise B GA 1 (Elise B)
+ 36.55 Elise B 2 (Elise B)
+ 32.01 Elise B 1 (Elise B)
+ 31.43 Random 2
+ 15.22 Evil Elise B 1 (Elise B)
+ 12.25 CD 2
+ 11.79 Hard Majority 2
+ 10.91 Random 1
+  9.44 Evil Elise B 2 (Elise B)
+  8.63 CD 1
+  7.17 Shifter 2 (Sahee)
+  6.77 Shifter 1 (Sahee)
+  3.14 Hard Majority 1
+  2.77 Copier 1 (Sahee)
+  2.43 Copier 2 (Sahee)
+  2.42 Static Genetic Algorithm 1 (Bennett Wendorf)
+  2.19 Stable Shifter 2 (Sahee)
+  2.04 Suspicious Tit for Tat 1
+  2.02 Suspicious Tit for Tat 2
+  1.98 Stable Shifter 1 (Sahee)
+  1.63 Tit for Tat 2
+  1.63 Copier Shifted 1 (Sahee)
+  1.63 Copier Shifted 2 (Sahee)
+  1.63 Tit for Tat 1
+  0.26 Static Genetic Algorithm 2 (Bennett Wendorf)
+
+--- Payoff R ---
+102.74 Cooperate 1
+101.02 Tit for Two Tats 2
+100.80 Cooperate 2
+100.76 Tit for Two Tats 1
+ 96.69 Stable Shifter 2 (Sahee)
+ 93.28 Soft Majority 2
+ 85.49 Stable Shifter 1 (Sahee)
+ 85.04 Soft Majority 1
+ 81.00 Shifter 1 (Sahee)
+ 79.03 Shifter 2 (Sahee)
+ 76.83 Tit for Tat 1
+ 74.56 Copier Shifted 2 (Sahee)
+ 73.75 Tit for Tat 2
+ 73.11 Copier Shifted 1 (Sahee)
+ 64.65 Lenient Grim 2
+ 64.24 Lenient Grim 1
+ 57.41 Grim 1
+ 57.00 Prober 1
+ 56.70 Prober 2
+ 55.68 CCD 1
+ 53.72 Copier 1 (Sahee)
+ 52.38 Copier 2 (Sahee)
+ 51.27 CCD 2
+ 50.49 Elise B GA 1 (Elise B)
+ 49.90 RooRue 2 (Laik)
+ 48.88 RooRue 1 (Laik)
+ 47.81 Suspicious Tit for Tat 1
+ 47.03 Grim 2
+ 44.11 Invert Copier 1 (Sahee)
+ 43.64 Elise B GA 2 (Elise B)
+ 43.33 Elise B 1 (Elise B)
+ 42.86 Invert Copier 2 (Sahee)
+ 41.90 Elise B 2 (Elise B)
+ 40.87 Hard Majority 1
+ 38.74 Suspicious Tit for Tat 2
+ 37.42 Static Genetic Algorithm 2 (Bennett Wendorf)
+ 37.04 Static Genetic Algorithm 1 (Bennett Wendorf)
+ 36.42 Random 1
+ 34.35 Random 2
+ 33.60 Inverse Tit for Tat 2
+ 30.04 Inverse Tit for Tat 1
+ 29.72 Evil Elise B GA 2 (Elise B)
+ 29.15 Hard Majority 2
+ 28.73 CD 1
+ 28.58 Evil Elise B GA 1 (Elise B)
+ 28.34 CD 2
+ 25.99 Evil Elise B 2 (Elise B)
+ 24.03 Evil Elise B 1 (Elise B)
+  0.00 Defect 2
+  0.00 Defect 1
+
+--- Payoff S ---
+ 52.82 Inverse Tit for Tat 1
+ 49.20 Cooperate 2
+ 48.78 Inverse Tit for Tat 2
+ 48.73 CCD 2
+ 47.26 Cooperate 1
+ 46.66 CD 2
+ 46.30 Invert Copier 2 (Sahee)
+ 46.27 CD 1
+ 44.32 CCD 1
+ 43.10 Elise B 2 (Elise B)
+ 41.67 Elise B 1 (Elise B)
+ 41.62 Invert Copier 1 (Sahee)
+ 40.97 Evil Elise B 1 (Elise B)
+ 40.64 Random 2
+ 40.50 Elise B GA 2 (Elise B)
+ 39.01 Evil Elise B 2 (Elise B)
+ 38.96 Static Genetic Algorithm 1 (Bennett Wendorf)
+ 38.59 Random 1
+ 38.58 Static Genetic Algorithm 2 (Bennett Wendorf)
+ 37.93 Elise B GA 1 (Elise B)
+ 33.79 Hard Majority 2
+ 31.67 Soft Majority 1
+ 30.61 Hard Majority 1
+ 29.86 Copier 2 (Sahee)
+ 29.68 Suspicious Tit for Tat 1
+ 29.51 Soft Majority 2
+ 29.33 Suspicious Tit for Tat 2
+ 29.33 Copier 1 (Sahee)
+ 29.31 Evil Elise B GA 1 (Elise B)
+ 29.30 Copier Shifted 2 (Sahee)
+ 28.74 Copier Shifted 1 (Sahee)
+ 28.29 Evil Elise B GA 2 (Elise B)
+ 27.71 Tit for Tat 2
+ 27.14 Tit for Tat 1
+ 26.04 Tit for Two Tats 1
+ 21.31 Tit for Two Tats 2
+ 19.83 Prober 2
+ 19.36 Shifter 2 (Sahee)
+ 19.18 Prober 1
+ 18.21 RooRue 1 (Laik)
+ 17.04 RooRue 2 (Laik)
+ 16.41 Shifter 1 (Sahee)
+ 15.68 Stable Shifter 1 (Sahee)
+ 14.53 Stable Shifter 2 (Sahee)
+  1.09 Lenient Grim 2
+  1.08 Lenient Grim 1
+  0.71 Grim 2
+  0.67 Grim 1
+  0.00 Defect 2
+  0.00 Defect 1
+
+--- Payoff T ---
+ 51.41 Evil Elise B GA 1 (Elise B)
+ 50.40 Evil Elise B GA 2 (Elise B)
+ 48.17 Defect 2
+ 47.38 Defect 1
+ 44.54 CD 1
+ 44.21 CD 2
+ 40.89 Evil Elise B 2 (Elise B)
+ 38.63 Static Genetic Algorithm 2 (Bennett Wendorf)
+ 38.48 Static Genetic Algorithm 1 (Bennett Wendorf)
+ 37.93 Evil Elise B 1 (Elise B)
+ 36.53 Inverse Tit for Tat 1
+ 36.41 Random 1
+ 36.14 Hard Majority 2
+ 35.79 Elise B 2 (Elise B)
+ 35.64 RooRue 1 (Laik)
+ 35.27 Elise B 1 (Elise B)
+ 34.86 Grim 2
+ 34.72 Grim 1
+ 34.53 Lenient Grim 2
+ 34.35 Random 2
+ 34.12 RooRue 2 (Laik)
+ 33.45 Inverse Tit for Tat 2
+ 32.15 CCD 1
+ 30.90 Elise B GA 2 (Elise B)
+ 30.40 CCD 2
+ 30.35 Copier 2 (Sahee)
+ 30.09 Suspicious Tit for Tat 1
+ 29.98 Hard Majority 1
+ 29.74 Suspicious Tit for Tat 2
+ 29.72 Prober 2
+ 28.98 Copier Shifted 2 (Sahee)
+ 28.92 Prober 1
+ 28.77 Copier 1 (Sahee)
+ 28.65 Elise B GA 1 (Elise B)
+ 28.57 Lenient Grim 1
+ 28.41 Copier Shifted 1 (Sahee)
+ 27.38 Tit for Tat 2
+ 26.81 Tit for Tat 1
+ 20.51 Invert Copier 1 (Sahee)
+ 18.32 Invert Copier 2 (Sahee)
+ 17.93 Shifter 2 (Sahee)
+ 17.50 Soft Majority 1
+ 15.47 Soft Majority 2
+ 15.28 Stable Shifter 1 (Sahee)
+ 15.05 Shifter 1 (Sahee)
+ 14.10 Stable Shifter 2 (Sahee)
+  5.20 Tit for Two Tats 1
+  4.31 Tit for Two Tats 2
+  0.00 Cooperate 2
+  0.00 Cooperate 1
+
+--- Payoff P ---
+102.62 Defect 1
+101.83 Defect 2
+ 67.40 Grim 2
+ 57.21 Grim 1
+ 56.11 Lenient Grim 1
+ 52.19 Suspicious Tit for Tat 2
+ 50.92 Hard Majority 2
+ 49.73 Lenient Grim 2
+ 48.94 RooRue 2 (Laik)
+ 48.55 Hard Majority 1
+ 47.27 RooRue 1 (Laik)
+ 47.07 Evil Elise B 1 (Elise B)
+ 44.89 Prober 1
+ 44.11 Evil Elise B 2 (Elise B)
+ 43.76 Invert Copier 1 (Sahee)
+ 43.75 Prober 2
+ 42.52 Invert Copier 2 (Sahee)
+ 42.42 Suspicious Tit for Tat 1
+ 41.59 Evil Elise B GA 2 (Elise B)
+ 40.70 Evil Elise B GA 1 (Elise B)
+ 40.65 Random 2
+ 38.59 Random 1
+ 38.17 Copier 1 (Sahee)
+ 37.54 Shifter 1 (Sahee)
+ 37.41 Copier 2 (Sahee)
+ 35.52 Static Genetic Algorithm 1 (Bennett Wendorf)
+ 35.37 Static Genetic Algorithm 2 (Bennett Wendorf)
+ 34.96 Elise B GA 2 (Elise B)
+ 34.17 Inverse Tit for Tat 2
+ 33.69 Shifter 2 (Sahee)
+ 33.55 Stable Shifter 1 (Sahee)
+ 32.93 Elise B GA 1 (Elise B)
+ 30.79 CD 2
+ 30.61 Inverse Tit for Tat 1
+ 30.46 CD 1
+ 29.73 Elise B 1 (Elise B)
+ 29.21 Elise B 2 (Elise B)
+ 24.68 Stable Shifter 2 (Sahee)
+ 23.36 Tit for Two Tats 2
+ 21.16 Tit for Tat 2
+ 19.74 Copier Shifted 1 (Sahee)
+ 19.60 CCD 2
+ 19.21 Tit for Tat 1
+ 18.01 Tit for Two Tats 1
+ 17.85 CCD 1
+ 17.16 Copier Shifted 2 (Sahee)
+ 15.80 Soft Majority 1
+ 11.73 Soft Majority 2
+  0.00 Cooperate 2
+  0.00 Cooperate 1
+
+--- Tournament 2 ---
+
+--- Self Score ---
+381.75 Grim
+381.31 Evil Elise B GA (Elise B)
+380.69 Tit for Tat
+380.10 Copier Shifted (Sahee)
+378.63 Lenient Grim
+372.75 Stable Shifter (Sahee)
+364.74 RooRue (Laik)
+353.11 Soft Majority
+351.10 Prober
+350.00 Static Genetic Algorithm (Bennett Wendorf)
+345.31 Tit for Two Tats
+343.90 CD
+343.67 Defect
+337.98 Shifter (Sahee)
+337.01 Inverse Tit for Tat
+324.88 CCD
+322.30 Suspicious Tit for Tat
+320.41 Hard Majority
+316.86 Elise B (Elise B)
+315.10 Random
+313.30 Elise B GA (Elise B)
+305.68 Evil Elise B (Elise B)
+304.54 Cooperate
+272.78 Invert Copier (Sahee)
+254.45 Copier (Sahee)
+
+--- Opp Score ---
+546.98 Cooperate
+432.67 Tit for Two Tats
+424.44 Soft Majority
+418.23 CCD
+382.26 Tit for Tat
+381.67 Copier Shifted (Sahee)
+379.55 Elise B (Elise B)
+372.81 Invert Copier (Sahee)
+372.10 Stable Shifter (Sahee)
+360.53 Elise B GA (Elise B)
+353.49 Inverse Tit for Tat
+347.06 Random
+346.28 CD
+345.84 Shifter (Sahee)
+337.71 Static Genetic Algorithm (Bennett Wendorf)
+326.67 Evil Elise B (Elise B)
+321.65 Hard Majority
+320.11 Suspicious Tit for Tat
+318.33 Prober
+281.69 RooRue (Laik)
+276.36 Evil Elise B GA (Elise B)
+258.45 Copier (Sahee)
+238.34 Lenient Grim
+207.57 Grim
+101.58 Defect
+
+--- Score Diff ---
+242.09 Defect
+174.19 Grim
+140.29 Lenient Grim
+104.95 Evil Elise B GA (Elise B)
+ 83.06 RooRue (Laik)
+ 32.77 Prober
+ 12.29 Static Genetic Algorithm (Bennett Wendorf)
+  2.19 Suspicious Tit for Tat
+  0.65 Stable Shifter (Sahee)
+ -1.23 Hard Majority
+ -1.56 Tit for Tat
+ -1.56 Copier Shifted (Sahee)
+ -2.38 CD
+ -4.00 Copier (Sahee)
+ -7.86 Shifter (Sahee)
+-16.47 Inverse Tit for Tat
+-20.99 Evil Elise B (Elise B)
+-31.97 Random
+-47.24 Elise B GA (Elise B)
+-62.69 Elise B (Elise B)
+-71.33 Soft Majority
+-87.36 Tit for Two Tats
+-93.35 CCD
+-100.03 Invert Copier (Sahee)
+-242.44 Cooperate
+
+--- Score Abs Diff ---
+242.44 Cooperate
+242.09 Defect
+174.19 Grim
+140.29 Lenient Grim
+104.95 Evil Elise B GA (Elise B)
+100.03 Invert Copier (Sahee)
+ 93.35 CCD
+ 87.36 Tit for Two Tats
+ 83.06 RooRue (Laik)
+ 71.33 Soft Majority
+ 62.69 Elise B (Elise B)
+ 47.24 Elise B GA (Elise B)
+ 32.77 Prober
+ 31.97 Random
+ 20.99 Evil Elise B (Elise B)
+ 16.47 Inverse Tit for Tat
+ 12.29 Static Genetic Algorithm (Bennett Wendorf)
+  7.86 Shifter (Sahee)
+  4.00 Copier (Sahee)
+  2.38 CD
+  2.19 Suspicious Tit for Tat
+  1.56 Copier Shifted (Sahee)
+  1.56 Tit for Tat
+  1.23 Hard Majority
+  0.65 Stable Shifter (Sahee)
+
+--- Payoff R ---
+101.51 Cooperate
+ 99.79 Tit for Two Tats
+ 88.69 Stable Shifter (Sahee)
+ 84.77 Soft Majority
+ 77.32 Tit for Tat
+ 76.58 Copier Shifted (Sahee)
+ 72.85 Shifter (Sahee)
+ 57.45 Prober
+ 56.49 Lenient Grim
+ 52.80 Invert Copier (Sahee)
+ 50.44 CCD
+ 46.40 RooRue (Laik)
+ 45.11 Grim
+ 42.45 Elise B GA (Elise B)
+ 41.20 Suspicious Tit for Tat
+ 37.99 Elise B (Elise B)
+ 37.83 Static Genetic Algorithm (Bennett Wendorf)
+ 34.30 Random
+ 34.24 Hard Majority
+ 29.19 CD
+ 28.91 Inverse Tit for Tat
+ 28.59 Evil Elise B GA (Elise B)
+ 22.53 Evil Elise B (Elise B)
+ 15.86 Copier (Sahee)
+  0.00 Defect
+
+--- Payoff S ---
+ 49.56 CCD
+ 48.49 Cooperate
+ 47.46 Inverse Tit for Tat
+ 47.01 Elise B (Elise B)
+ 45.81 CD
+ 42.47 Evil Elise B (Elise B)
+ 40.69 Random
+ 38.73 Elise B GA (Elise B)
+ 38.17 Static Genetic Algorithm (Bennett Wendorf)
+ 34.31 Hard Majority
+ 32.40 Invert Copier (Sahee)
+ 30.21 Soft Majority
+ 30.06 Evil Elise B GA (Elise B)
+ 29.38 Suspicious Tit for Tat
+ 26.06 Copier Shifted (Sahee)
+ 25.77 Tit for Tat
+ 25.31 Copier (Sahee)
+ 21.87 Tit for Two Tats
+ 20.00 Prober
+ 18.50 RooRue (Laik)
+ 16.19 Shifter (Sahee)
+ 14.95 Stable Shifter (Sahee)
+  1.14 Lenient Grim
+  0.73 Grim
+  0.00 Defect
+
+--- Payoff T ---
+ 51.05 Evil Elise B GA (Elise B)
+ 48.42 Defect
+ 45.33 CD
+ 44.16 Inverse Tit for Tat
+ 40.63 Static Genetic Algorithm (Bennett Wendorf)
+ 38.27 Evil Elise B (Elise B)
+ 35.57 Grim
+ 35.11 RooRue (Laik)
+ 34.47 Elise B (Elise B)
+ 34.30 Random
+ 34.06 Hard Majority
+ 30.89 CCD
+ 29.82 Suspicious Tit for Tat
+ 29.28 Elise B GA (Elise B)
+ 29.19 Lenient Grim
+ 26.55 Prober
+ 25.75 Copier Shifted (Sahee)
+ 25.46 Tit for Tat
+ 24.51 Copier (Sahee)
+ 15.94 Soft Majority
+ 15.08 Stable Shifter (Sahee)
+ 14.61 Shifter (Sahee)
+ 12.39 Invert Copier (Sahee)
+  4.40 Tit for Two Tats
+  0.00 Cooperate
+
+--- Payoff P ---
+101.58 Defect
+ 84.32 Copier (Sahee)
+ 68.60 Grim
+ 63.18 Lenient Grim
+ 52.40 Invert Copier (Sahee)
+ 49.99 RooRue (Laik)
+ 49.60 Suspicious Tit for Tat
+ 47.39 Hard Majority
+ 46.73 Evil Elise B (Elise B)
+ 46.34 Shifter (Sahee)
+ 46.01 Prober
+ 40.71 Random
+ 40.31 Evil Elise B GA (Elise B)
+ 39.54 Elise B GA (Elise B)
+ 33.37 Static Genetic Algorithm (Bennett Wendorf)
+ 31.28 Stable Shifter (Sahee)
+ 30.53 Elise B (Elise B)
+ 29.67 CD
+ 29.47 Inverse Tit for Tat
+ 23.94 Tit for Two Tats
+ 21.60 Copier Shifted (Sahee)
+ 21.46 Tit for Tat
+ 19.11 CCD
+ 19.07 Soft Majority
+  0.00 Cooperate
+
+--- Tournament 3 ---
+
+--- Self Score ---
+377.77 Evil Elise B GA 1 (Elise B)
+377.13 Copier Shifted 2 (Sahee)
+375.61 Stable Shifter 2 (Sahee)
+371.91 Copier Shifted 1 (Sahee)
+369.98 RooRue 1 (Laik)
+369.26 Shifter 1 (Sahee)
+368.01 Shifter 2 (Sahee)
+363.87 RooRue 2 (Laik)
+361.75 Evil Elise B GA 2 (Elise B)
+359.41 Stable Shifter 1 (Sahee)
+336.08 Elise B GA 1 (Elise B)
+334.29 Elise B GA 2 (Elise B)
+327.76 Invert Copier 1 (Sahee)
+327.08 Evil Elise B 2 (Elise B)
+323.72 Copier 2 (Sahee)
+322.20 Copier 1 (Sahee)
+321.92 Evil Elise B 1 (Elise B)
+320.25 Invert Copier 2 (Sahee)
+317.74 Static Genetic Algorithm 2 (Bennett Wendorf)
+317.70 Static Genetic Algorithm 1 (Bennett Wendorf)
+313.64 Elise B 2 (Elise B)
+313.57 Elise B 1 (Elise B)
+
+--- Opp Score ---
+390.08 Elise B GA 1 (Elise B)
+387.07 Elise B GA 2 (Elise B)
+381.68 Elise B 2 (Elise B)
+381.64 Elise B 1 (Elise B)
+378.79 Copier Shifted 2 (Sahee)
+378.61 Stable Shifter 2 (Sahee)
+377.05 Shifter 1 (Sahee)
+376.28 Shifter 2 (Sahee)
+373.57 Copier Shifted 1 (Sahee)
+364.43 Stable Shifter 1 (Sahee)
+358.18 Invert Copier 2 (Sahee)
+350.79 Static Genetic Algorithm 1 (Bennett Wendorf)
+350.34 Static Genetic Algorithm 2 (Bennett Wendorf)
+350.05 Invert Copier 1 (Sahee)
+326.84 Copier 2 (Sahee)
+325.54 Copier 1 (Sahee)
+320.07 Evil Elise B 1 (Elise B)
+318.41 Evil Elise B 2 (Elise B)
+285.96 RooRue 1 (Laik)
+284.21 RooRue 2 (Laik)
+261.00 Evil Elise B GA 2 (Elise B)
+250.06 Evil Elise B GA 1 (Elise B)
+
+--- Score Diff ---
+127.71 Evil Elise B GA 1 (Elise B)
+100.75 Evil Elise B GA 2 (Elise B)
+ 84.02 RooRue 1 (Laik)
+ 79.67 RooRue 2 (Laik)
+  8.68 Evil Elise B 2 (Elise B)
+  1.85 Evil Elise B 1 (Elise B)
+ -1.67 Copier Shifted 1 (Sahee)
+ -1.67 Copier Shifted 2 (Sahee)
+ -3.00 Stable Shifter 2 (Sahee)
+ -3.12 Copier 2 (Sahee)
+ -3.33 Copier 1 (Sahee)
+ -5.02 Stable Shifter 1 (Sahee)
+ -7.79 Shifter 1 (Sahee)
+ -8.27 Shifter 2 (Sahee)
+-22.29 Invert Copier 1 (Sahee)
+-32.60 Static Genetic Algorithm 2 (Bennett Wendorf)
+-33.09 Static Genetic Algorithm 1 (Bennett Wendorf)
+-37.93 Invert Copier 2 (Sahee)
+-52.78 Elise B GA 2 (Elise B)
+-54.00 Elise B GA 1 (Elise B)
+-68.05 Elise B 2 (Elise B)
+-68.07 Elise B 1 (Elise B)
+
+--- Score Abs Diff ---
+127.71 Evil Elise B GA 1 (Elise B)
+100.75 Evil Elise B GA 2 (Elise B)
+ 84.02 RooRue 1 (Laik)
+ 79.67 RooRue 2 (Laik)
+ 68.07 Elise B 1 (Elise B)
+ 68.05 Elise B 2 (Elise B)
+ 54.00 Elise B GA 1 (Elise B)
+ 52.78 Elise B GA 2 (Elise B)
+ 37.93 Invert Copier 2 (Sahee)
+ 33.09 Static Genetic Algorithm 1 (Bennett Wendorf)
+ 32.60 Static Genetic Algorithm 2 (Bennett Wendorf)
+ 22.29 Invert Copier 1 (Sahee)
+  8.68 Evil Elise B 2 (Elise B)
+  8.27 Shifter 2 (Sahee)
+  7.79 Shifter 1 (Sahee)
+  5.02 Stable Shifter 1 (Sahee)
+  3.33 Copier 1 (Sahee)
+  3.12 Copier 2 (Sahee)
+  3.00 Stable Shifter 2 (Sahee)
+  1.85 Evil Elise B 1 (Elise B)
+  1.67 Copier Shifted 2 (Sahee)
+  1.67 Copier Shifted 1 (Sahee)
+
+--- Payoff R ---
+ 78.42 Stable Shifter 2 (Sahee)
+ 73.21 Stable Shifter 1 (Sahee)
+ 72.13 Shifter 1 (Sahee)
+ 71.63 Shifter 2 (Sahee)
+ 65.92 Copier Shifted 1 (Sahee)
+ 64.12 Copier Shifted 2 (Sahee)
+ 55.65 Elise B GA 1 (Elise B)
+ 50.55 Elise B GA 2 (Elise B)
+ 44.09 RooRue 1 (Laik)
+ 41.33 RooRue 2 (Laik)
+ 36.98 Elise B 1 (Elise B)
+ 36.93 Elise B 2 (Elise B)
+ 36.43 Invert Copier 2 (Sahee)
+ 35.28 Invert Copier 1 (Sahee)
+ 34.18 Static Genetic Algorithm 2 (Bennett Wendorf)
+ 33.83 Static Genetic Algorithm 1 (Bennett Wendorf)
+ 32.56 Copier 2 (Sahee)
+ 29.49 Copier 1 (Sahee)
+ 25.91 Evil Elise B GA 1 (Elise B)
+ 24.86 Evil Elise B 2 (Elise B)
+ 24.56 Evil Elise B 1 (Elise B)
+ 24.42 Evil Elise B GA 2 (Elise B)
+
+--- Payoff S ---
+ 48.07 Elise B 2 (Elise B)
+ 48.02 Elise B 1 (Elise B)
+ 42.58 Invert Copier 2 (Sahee)
+ 42.17 Static Genetic Algorithm 1 (Bennett Wendorf)
+ 41.82 Static Genetic Algorithm 2 (Bennett Wendorf)
+ 41.80 Elise B GA 2 (Elise B)
+ 41.68 Invert Copier 1 (Sahee)
+ 40.44 Evil Elise B 1 (Elise B)
+ 40.14 Evil Elise B 2 (Elise B)
+ 39.32 Elise B GA 1 (Elise B)
+ 38.63 Copier 1 (Sahee)
+ 37.03 Copier 2 (Sahee)
+ 33.41 Copier Shifted 2 (Sahee)
+ 30.47 Copier Shifted 1 (Sahee)
+ 27.44 Evil Elise B GA 2 (Elise B)
+ 27.12 Shifter 2 (Sahee)
+ 27.08 Shifter 1 (Sahee)
+ 24.60 Evil Elise B GA 1 (Elise B)
+ 23.72 Stable Shifter 2 (Sahee)
+ 22.49 RooRue 2 (Laik)
+ 22.33 Stable Shifter 1 (Sahee)
+ 21.53 RooRue 1 (Laik)
+
+--- Payoff T ---
+ 50.14 Evil Elise B GA 1 (Elise B)
+ 47.59 Evil Elise B GA 2 (Elise B)
+ 41.88 Evil Elise B 2 (Elise B)
+ 40.81 Evil Elise B 1 (Elise B)
+ 38.43 RooRue 2 (Laik)
+ 38.33 RooRue 1 (Laik)
+ 37.96 Copier 1 (Sahee)
+ 37.22 Invert Copier 1 (Sahee)
+ 36.41 Copier 2 (Sahee)
+ 35.55 Static Genetic Algorithm 1 (Bennett Wendorf)
+ 35.30 Static Genetic Algorithm 2 (Bennett Wendorf)
+ 34.99 Invert Copier 2 (Sahee)
+ 34.47 Elise B 2 (Elise B)
+ 34.41 Elise B 1 (Elise B)
+ 33.07 Copier Shifted 2 (Sahee)
+ 31.24 Elise B GA 2 (Elise B)
+ 30.14 Copier Shifted 1 (Sahee)
+ 28.53 Elise B GA 1 (Elise B)
+ 25.52 Shifter 1 (Sahee)
+ 25.47 Shifter 2 (Sahee)
+ 23.13 Stable Shifter 2 (Sahee)
+ 21.33 Stable Shifter 1 (Sahee)
+
+--- Payoff P ---
+ 50.56 Evil Elise B GA 2 (Elise B)
+ 49.36 Evil Elise B GA 1 (Elise B)
+ 47.75 RooRue 2 (Laik)
+ 46.05 RooRue 1 (Laik)
+ 44.19 Evil Elise B 1 (Elise B)
+ 44.00 Copier 2 (Sahee)
+ 43.92 Copier 1 (Sahee)
+ 43.12 Evil Elise B 2 (Elise B)
+ 38.70 Static Genetic Algorithm 2 (Bennett Wendorf)
+ 38.45 Static Genetic Algorithm 1 (Bennett Wendorf)
+ 36.00 Invert Copier 2 (Sahee)
+ 35.82 Invert Copier 1 (Sahee)
+ 33.12 Stable Shifter 1 (Sahee)
+ 30.59 Elise B 1 (Elise B)
+ 30.53 Elise B 2 (Elise B)
+ 26.50 Elise B GA 1 (Elise B)
+ 26.40 Elise B GA 2 (Elise B)
+ 25.78 Shifter 2 (Sahee)
+ 25.27 Shifter 1 (Sahee)
+ 24.73 Stable Shifter 2 (Sahee)
+ 23.48 Copier Shifted 1 (Sahee)
+ 19.40 Copier Shifted 2 (Sahee)
+
+--- Tournament 4 ---
+
+--- Self Score ---
+385.32 Evil Elise B GA (Elise B)
+371.88 Copier Shifted (Sahee)
+366.34 Shifter (Sahee)
+360.46 RooRue (Laik)
+357.33 Stable Shifter (Sahee)
+330.97 Static Genetic Algorithm (Bennett Wendorf)
+325.32 Evil Elise B (Elise B)
+324.60 Elise B GA (Elise B)
+318.15 Elise B (Elise B)
+306.26 Invert Copier (Sahee)
+304.95 Copier (Sahee)
+
+--- Opp Score ---
+391.98 Elise B GA (Elise B)
+382.20 Elise B (Elise B)
+374.49 Shifter (Sahee)
+373.38 Copier Shifted (Sahee)
+362.75 Invert Copier (Sahee)
+361.07 Stable Shifter (Sahee)
+347.13 Static Genetic Algorithm (Bennett Wendorf)
+321.63 Evil Elise B (Elise B)
+308.93 Copier (Sahee)
+279.10 RooRue (Laik)
+248.90 Evil Elise B GA (Elise B)
+
+--- Score Diff ---
+136.42 Evil Elise B GA (Elise B)
+ 81.36 RooRue (Laik)
+  3.69 Evil Elise B (Elise B)
+ -1.50 Copier Shifted (Sahee)
+ -3.74 Stable Shifter (Sahee)
+ -3.99 Copier (Sahee)
+ -8.16 Shifter (Sahee)
+-16.16 Static Genetic Algorithm (Bennett Wendorf)
+-56.49 Invert Copier (Sahee)
+-64.05 Elise B (Elise B)
+-67.39 Elise B GA (Elise B)
+
+--- Score Abs Diff ---
+136.42 Evil Elise B GA (Elise B)
+ 81.36 RooRue (Laik)
+ 67.39 Elise B GA (Elise B)
+ 64.05 Elise B (Elise B)
+ 56.49 Invert Copier (Sahee)
+ 16.16 Static Genetic Algorithm (Bennett Wendorf)
+  8.16 Shifter (Sahee)
+  3.99 Copier (Sahee)
+  3.74 Stable Shifter (Sahee)
+  3.69 Evil Elise B (Elise B)
+  1.50 Copier Shifted (Sahee)
+
+--- Payoff R ---
+ 71.53 Stable Shifter (Sahee)
+ 69.74 Shifter (Sahee)
+ 57.87 Copier Shifted (Sahee)
+ 47.41 Elise B GA (Elise B)
+ 41.34 Invert Copier (Sahee)
+ 40.38 RooRue (Laik)
+ 35.61 Elise B (Elise B)
+ 34.10 Static Genetic Algorithm (Bennett Wendorf)
+ 24.90 Evil Elise B GA (Elise B)
+ 22.63 Evil Elise B (Elise B)
+ 21.64 Copier (Sahee)
+
+--- Payoff S ---
+ 49.39 Elise B (Elise B)
+ 44.56 Elise B GA (Elise B)
+ 42.37 Evil Elise B (Elise B)
+ 41.90 Static Genetic Algorithm (Bennett Wendorf)
+ 39.59 Invert Copier (Sahee)
+ 38.29 Copier (Sahee)
+ 35.78 Copier Shifted (Sahee)
+ 27.80 Shifter (Sahee)
+ 25.46 Evil Elise B GA (Elise B)
+ 22.42 Stable Shifter (Sahee)
+ 21.53 RooRue (Laik)
+
+--- Payoff T ---
+ 52.74 Evil Elise B GA (Elise B)
+ 43.11 Evil Elise B (Elise B)
+ 38.67 Static Genetic Algorithm (Bennett Wendorf)
+ 37.81 RooRue (Laik)
+ 37.49 Copier (Sahee)
+ 36.58 Elise B (Elise B)
+ 35.48 Copier Shifted (Sahee)
+ 31.09 Elise B GA (Elise B)
+ 28.29 Invert Copier (Sahee)
+ 26.17 Shifter (Sahee)
+ 21.67 Stable Shifter (Sahee)
+
+--- Payoff P ---
+ 52.59 Copier (Sahee)
+ 50.27 RooRue (Laik)
+ 46.89 Evil Elise B GA (Elise B)
+ 41.89 Evil Elise B (Elise B)
+ 40.78 Invert Copier (Sahee)
+ 35.33 Static Genetic Algorithm (Bennett Wendorf)
+ 34.38 Stable Shifter (Sahee)
+ 28.42 Elise B (Elise B)
+ 26.94 Elise B GA (Elise B)
+ 26.30 Shifter (Sahee)
+ 20.87 Copier Shifted (Sahee)
+
